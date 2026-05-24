@@ -63,13 +63,19 @@ vim.diagnostic.config({
 })
 
 -- Buffer navigation
-vim.keymap.set("n", "<leader>]", ":bnext<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>[", ":bprevious<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>.", ":bnext<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>,", ":bprevious<CR>", { noremap = true, silent = true })
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("i", "jk", "<Esc>")
 
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+
+-- Window navigation
+vim.keymap.set("n", "<C-j>", "<C-w>j", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-h>", "<C-w>h", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
 
 -- highlight yanked text
 vim.api.nvim_create_autocmd("TextYankPost", {

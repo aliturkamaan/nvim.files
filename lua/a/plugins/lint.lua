@@ -12,7 +12,7 @@ return {
 				typescript = { "eslint_d" },
 				javascriptreact = { "eslint_d" },
 				typescriptreact = { "eslint_d" },
-				json = { "jsonlint" }, -- optional
+				-- json = { "jsonlint" }, -- optional
 				python = { "ruff" }, -- add if you use Python
 			}
 

@@ -32,14 +32,17 @@ return {
 		keymaps = {
 			show_help = "<f1>",
 		},
-		-- floating_window_scaling_factor = 0.75,
+		floating_window_scaling_factor = 1,
+		yazi_floating_window_border = "shadow",
 		-- yazi_floating_window_winblend = 10,
-		-- yazi_floating_window_border = 'rounded',
 		-- open_multiple_tabs = false,
 		-- change_neovim_cwd_on_close = false,
 	},
 	-- 👇 if you use `open_for_directories=true`, this is recommended
 	init = function()
+		require("yazi").setup({})
+
+		vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#504945", bg = "NONE" })
 		-- mark netrw as loaded so it's not loaded at all.
 		--
 		-- More details: https://github.com/mikavilpas/yazi.nvim/issues/802

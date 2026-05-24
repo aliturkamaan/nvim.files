@@ -49,6 +49,9 @@ return {
 			require("luasnip.loaders.from_vscode").lazy_load()
 
 			cmp.setup({
+				completion = {
+					autocomplete = false,
+				},
 				formatting = lsp_zero.cmp_format({ details = true }),
 				sources = {
 					{ name = "nvim_lsp" },
